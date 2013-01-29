@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Notegy</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body style="background-color: #2C2C2C; color: white;">
+	<div id="container">
+	 <div class="menuBar">
+        <ul>
+        	<li><b><%= link_to "Notegy", root_path %></b></li>
+            <li><%= link_to "Notes", notes_path %></li>
+        </ul> 
+        <span><img src="http://www.stolaf.edu/services/hr/facebook_logo.png" width="30" height="30"><%= link_to "  Connect With Facebook!", "/auth/facebook" %></img></span>
+    </div>
+    <div class="sideBar">
+        <ul>
+        	<li><b>SIDE BAAARR</b></li>
+            <li>side bar</li>
+        </ul> 
+        <p>sidebar.</p>
+    </div>
+	<div class="content">
+		<%= yield %>
+	</div>
+	<div id="footer"></div>
+</div>
+</body>
+</html>
